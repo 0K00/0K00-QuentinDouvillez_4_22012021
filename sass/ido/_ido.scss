@@ -3,7 +3,7 @@ $color--ido--text: #ffff;
 $color--ido--text--hover: #cccccc;
 
 .ido {
-  background: url('/img/image-de-presentation.png') no-repeat fixed;
+  background: url('./img/image-de-presentation.png') no-repeat fixed;
   &--bloc {
     padding: 6.25rem 0;
     &--item {

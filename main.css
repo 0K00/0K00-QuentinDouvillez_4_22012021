@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: et-line;
-  src: url("/font/et-line.eot");
-  src: url("/font/et-line.eot") format("embedded-opentype"), url("/font/et-line.woff") format("woff"), url("/font/et-line.ttf") format("truetype"), url("/font/et-line.svg") format("svg");
+  src: url("./font/et-line.eot");
+  src: url("./font/et-line.eot") format("embedded-opentype"), url("./font/et-line.woff") format("woff"), url("./font/et-line.ttf") format("truetype"), url("./font/et-line.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 header {
-  background: url("../img/la-chouette-agence-banniere.png") no-repeat fixed;
+  background: url("./img/la-chouette-agence-banniere.png") no-repeat fixed;
 }
 
 .nav {
@@ -262,7 +262,7 @@ header {
 }
 
 .ido {
-  background: url("/img/image-de-presentation.png") no-repeat fixed;
+  background: url("./img/image-de-presentation.png") no-repeat fixed;
 }
 .ido--bloc {
   padding: 6.25rem 0;
@@ -371,7 +371,7 @@ header {
 
 .contact {
   position: relative;
-  background: url("../img/la-chouette-agence-banniere.png") no-repeat;
+  background: url("./img/la-chouette-agence-banniere.png") no-repeat;
   text-align: center;
 }
 .contact--bloc {
