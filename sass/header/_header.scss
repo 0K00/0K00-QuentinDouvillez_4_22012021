@@ -1,0 +1,63 @@
+header {
+  background: url('../img/la-chouette-agence-banniere.jpg') no-repeat fixed;
+}
+
+$color--title--hero: #f3976c;
+
+.nav {
+  background-color: white;
+  padding: 0 2rem;
+  &--bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: '. .';
+    padding: 2.9rem 0;
+    &--logotype {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+      h1 {
+        display: none;
+      }
+      img {
+        height: 2.5rem;
+      }
+    }
+    &--menu {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      &--link {
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 1rem;
+        a {
+          color: rgb(7, 7, 7);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 7rem 0;
+  &--logotype {
+    img {
+      width: 6.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &--text {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: $color--title--hero;
+    }
+  }
+}

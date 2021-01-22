@@ -1,0 +1,84 @@
+.contact {
+  height: 100vh;
+  padding-top: 10rem;
+  text-align: center;
+  &--title {
+    display: inline-block;
+    color: rgb(73, 73, 73);
+    margin-bottom: 5rem;
+    max-width: 450px;
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+  &--form {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    grid-template-areas:
+      'name mail'
+      'how how'
+      'msg msg'
+      'text cta';
+    max-width: 800px;
+    margin: 0 auto;
+    span {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      label {
+        font-size: 1rem;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        top: 0;
+        transform: translateY(-25px);
+      }
+      input:focus + label,
+      textarea:focus + label {
+        color:  #f39766;
+      }
+      input {
+        border: 0;
+        border-bottom: 1px solid rgb(156, 156, 156);
+        outline: none;
+        transition: 0.3s ease-in-out;
+        padding-bottom: 0.5rem;
+        &:focus {
+          border-bottom: 1px solid  #f39766;
+        }
+      }
+      textarea {
+        border: 0;
+        border-bottom: 1px solid rgb(156, 156, 156);
+        outline: none;
+        transition: 0.3s ease-in-out;
+        padding-bottom: 0.5rem;
+        resize: none;
+        &:focus {
+          border-bottom: 1px solid  #f39766;
+        }
+      }
+    }
+    &--name {
+      grid-area: name;
+    }
+    &--mail {
+      grid-area: mail;
+    }
+    &--how {
+      grid-area: how;
+    }
+    &--msg {
+      grid-area: msg;
+    }
+    &--text {
+      text-align: justify;
+      font-size: 0.6rem;
+      grid-area: text;
+    }
+    &--cta {
+      grid-area: cta;
+    }
+  }
+}

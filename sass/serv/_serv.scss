@@ -1,0 +1,77 @@
+.serv {
+  text-align: center;
+  max-width: 50rem;
+  margin-top: 5rem;
+  &--text {
+    color: rgb(73, 73, 73);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  &--info {
+    display: flex;
+    font-size: 0.688rem;
+    margin-bottom: 5rem;
+    span {
+      position: relative;
+      padding: 0 1rem;
+    }
+    span::before {
+      font-family: 'et-line';
+      font-size: 3.75rem;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      color: #364577 !important;
+      border-color: #364577 !important;
+      display: block;
+      margin-bottom: 2rem;
+    }
+    span::after {
+      display: block;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #333333 !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+    }
+    span:nth-child(1)::before {
+      content: '\e00c';
+    }
+    span:nth-child(1)::after {
+      content: 'Web design';
+    }
+    span:nth-child(2)::before {
+      content: '\e00e';
+    }
+    span:nth-child(2)::after {
+      content: 'Stratégie';
+    }
+    span:nth-child(3)::before {
+      content: '\e01c';
+    }
+    span:nth-child(3)::after {
+      content: 'Illustrations';
+    }
+  }
+  &--quota {
+      margin-bottom: 5rem;
+    &--text {
+      color: rgb(73, 73, 73);
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
+      &::before {
+          content: "“";
+      }
+      &::after {
+          content: "”";
+      }
+    }
+    &--author {
+        font-size: 1rem;
+    }
+  }
+}

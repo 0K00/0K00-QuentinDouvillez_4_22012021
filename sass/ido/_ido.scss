@@ -1,0 +1,39 @@
+$color-title: #f39766;
+
+.ido {
+  background: url('/img/image-de-presentation.bmp') no-repeat fixed;
+  &--bloc {
+    padding: 6.25rem 0;
+    &--item {
+      text-align: center;
+      background-color: rgba(116, 107, 84, 0.7);
+      padding: 2.5rem;
+      max-width: 600px;
+      &--title {
+        margin-bottom: 1.5rem;
+        color: $color-title;
+        h3 {
+          font-size: 1.375rem;
+          line-height: 1.4em;
+          font-weight: 400;
+        }
+      }
+      &--text {
+        color: white;
+        font-size: 0.7rem;
+        p {
+          margin-bottom: 1rem;
+        }
+        a {
+          color: white;
+          text-decoration: underline;
+          font-weight: 900;
+          transition: color .3s ease-in-out;
+          &:hover {
+            color: #cccccc;
+          }
+        }
+      }
+    }
+  }
+}
