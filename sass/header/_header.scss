@@ -1,11 +1,16 @@
 header {
-  background: url('../img/la-chouette-agence-banniere.jpg') no-repeat fixed;
+  background: url('../img/la-chouette-agence-banniere.png') no-repeat fixed;
 }
 
-$color--title--hero: #f3976c;
+$color--title--hero: #d15a1a;
+$color--nav--link--hover: #d15a1a;
+$color--nav--link: #131313;
+$color--bg--nav: #ffff;
 
 .nav {
-  background-color: white;
+  position: relative;
+  z-index: 2;
+  background-color: $color--bg--nav;
   padding: 0 2rem;
   &--bar {
     position: relative;
@@ -14,10 +19,10 @@ $color--title--hero: #f3976c;
     grid-template-areas: '. .';
     padding: 2.9rem 0;
     &--logotype {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
       h1 {
         display: none;
       }
@@ -36,7 +41,70 @@ $color--title--hero: #f3976c;
         margin-left: 1rem;
         font-size: 1rem;
         a {
-          color: rgb(7, 7, 7);
+          color: $color--nav--link;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $color--nav--link--hover;
+          }
+        }
+      }
+    }
+    &--menu--responsive--icon {
+      display: none;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 2rem;
+      height: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 100%;
+        height: 0.15rem;
+        background-color: $color--nav--link;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0.15rem;
+          background-color: $color--nav--link;
+        }
+        &::after {
+          transform: translateY(-300%);
+        }
+        &::before {
+          transform: translateY(300%);
+        }
+      }
+    }
+    &--menu--responsive {
+      z-index: 0;
+      display: none;
+      position: absolute;
+      top: 5.813rem;
+      background-color: #eeeeee;
+      width: 100vw;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+      text-align: justify;
+      &--link {
+        display: block;
+        padding: 0.75rem 3rem;
+        font-size: 1rem;
+        &:last-child {
+          border-top: 2px solid #d3d3d3;
+        }
+        a {
+          color: $color--nav--link;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $color--nav--link--hover;
+          }
         }
       }
     }

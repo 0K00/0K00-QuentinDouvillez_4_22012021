@@ -1,0 +1,39 @@
+@media screen and (max-width: 48rem) {
+  .nav--bar--menu {
+    display: none;
+  }
+  .nav--bar--menu--responsive, .nav--bar--menu--responsive--icon {
+    display: block;
+  }
+  .apear {
+    transform: translateY(0%);
+  }
+
+  .serv--info {
+    display: flex;
+    flex-direction: column;
+    span::after {
+      top: 60%;
+    }
+  }
+
+  .port--bloc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact--bloc {
+    padding: 1rem;
+    display: block;
+    margin: 0;
+  }
+  .contact--form {
+    display: flex;
+    flex-direction: column;
+    &--msg {
+      textarea {
+        margin-top: 2.75rem;
+      }
+    }
+  }
+}

@@ -1,19 +1,24 @@
+$color--port--line1: #ffff;
+$color--port--line2: #e2e2e2;
+$color--port--title: #131313;
+$color--port--text: #333333;
+
 .port {
   background: repeating-linear-gradient(
     0deg,
-    #fff,
-    #fff 6px,
-    rgb(226, 226, 226) 1px,
-    rgb(226, 226, 226) 7px
+    $color--port--line1,
+    $color--port--line1 6px,
+    $color--port--line2 1px,
+    $color--port--line2 7px
   );
   padding-bottom: 12rem;
   text-align: center;
   &--title {
     display: inline-block;
-    color: rgb(73, 73, 73);
+    color: $color--port--title;
     margin-bottom: 5rem;
     margin-top: 10rem;
-    max-width: 450px;
+    max-width: 28.25rem;
     h3 {
       font-size: 1.4rem;
       font-weight: 400;
@@ -23,11 +28,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    gap: 2rem;
     grid-template-areas:
       '. .'
       '. .';
-    max-width: 600px;
+    max-width: 37.5rem;
     &--card {
       display: flex;
       flex-direction: column;
@@ -38,7 +43,7 @@
         display: inline-block;
         text-align: center;
         img {
-          max-width: 100%;
+          max-width: 17.75rem;
         }
         &:hover img {
           opacity: 0.6;
@@ -49,10 +54,10 @@
           align-items: center;
           justify-content: center;
           font-family: Arial, Helvetica, sans-serif;
-          font-size: 32px;
+          font-size: 2rem;
           color: #fff;
-          width: 50px;
-          height: 50px;
+          width: 3.25rem;
+          height: 3.25rem;
           border-radius: 50%;
           background: rgba(0, 0, 0, 0.8);
           position: absolute;
@@ -63,16 +68,16 @@
       }
       &--text {
         &--title {
-          font-size: 15px;
+          font-size: 1rem;
           text-transform: uppercase;
           font-weight: 700;
-          color: #333333;
-          margin-top: 10px;
-          margin-bottom: 20px;
+          color: $color--port--title;
+          margin-top: 0.75rem;
+          margin-bottom: 1.25rem;
         }
         &--subtitle {
-          font-size: 11px;
-          color: #575757;
+          font-size: 0.75rem;
+          color: $color--port--text;
         }
       }
     }

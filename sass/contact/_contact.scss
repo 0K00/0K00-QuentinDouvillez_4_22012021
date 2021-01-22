@@ -1,12 +1,20 @@
+$color--contact--title: #d15a1a;
+$color--contact--text: #ffff;
+
 .contact {
-  height: 100vh;
-  padding-top: 10rem;
+  position: relative;
+  background: url('../img/la-chouette-agence-banniere.png') no-repeat;
   text-align: center;
+  &--bloc {
+    display: inline-block;
+    padding: 0 5rem;
+    margin: 5rem 0;
+  }
   &--title {
     display: inline-block;
-    color: rgb(73, 73, 73);
-    margin-bottom: 5rem;
-    max-width: 450px;
+    color: $color--contact--title;
+    margin: 2rem 0 3rem 0;
+    max-width: 28.25rem;
     h3 {
       font-size: 1.4rem;
       font-weight: 400;
@@ -14,49 +22,54 @@
   }
   &--form {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1.5fr 3fr;
     gap: 4rem;
     grid-template-areas:
       'name mail'
       'how how'
       'msg msg'
       'text cta';
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 62.5rem;
+    margin-bottom: 3rem;
     span {
       position: relative;
       display: flex;
       flex-direction: column-reverse;
       label {
+        color: $color--contact--text;
         font-size: 1rem;
         position: absolute;
         transition: 0.3s ease-in-out;
         top: 0;
-        transform: translateY(-25px);
+        transform: translateY(-1.5rem);
       }
       input:focus + label,
       textarea:focus + label {
-        color:  #f39766;
+        color: $color--contact--title;
       }
       input {
+        color: $color--contact--text;
         border: 0;
-        border-bottom: 1px solid rgb(156, 156, 156);
+        border-bottom: 1px solid $color--contact--text;
         outline: none;
         transition: 0.3s ease-in-out;
         padding-bottom: 0.5rem;
+        background-color: inherit;
         &:focus {
-          border-bottom: 1px solid  #f39766;
+          border-bottom: 1px solid $color--contact--title;
         }
       }
       textarea {
+        color: $color--contact--text;
         border: 0;
-        border-bottom: 1px solid rgb(156, 156, 156);
+        border-bottom: 1px solid $color--contact--text;
         outline: none;
         transition: 0.3s ease-in-out;
         padding-bottom: 0.5rem;
+        background-color: inherit;
         resize: none;
         &:focus {
-          border-bottom: 1px solid  #f39766;
+          border-bottom: 1px solid $color--contact--title;
         }
       }
     }
@@ -73,6 +86,7 @@
       grid-area: msg;
     }
     &--text {
+      color: $color--contact--text;
       text-align: justify;
       font-size: 0.6rem;
       grid-area: text;
