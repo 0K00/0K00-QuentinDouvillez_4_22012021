@@ -1,0 +1,40 @@
+$color--title: #d15a1a;
+$color--ido--text: #ffff;
+$color--ido--text--hover: #cccccc;
+
+.ido {
+  background: url('./img/image-de-presentation.webp') no-repeat fixed;
+  &--bloc {
+    padding: 6.25rem 0;
+    &--item {
+      text-align: center;
+      padding: 2.5rem;
+      max-width: 37.5rem;
+      &--title {
+        margin-bottom: 1.5rem;
+        color: $color--title;
+        h3 {
+          font-size: 1.375rem;
+          line-height: 1.4em;
+          font-weight: 400;
+        }
+      }
+      &--text {
+        color: $color--ido--text;
+        font-size: 0.75rem;
+        p {
+          margin-bottom: 1rem;
+        }
+        a {
+          color: $color--ido--text;
+          text-decoration: underline;
+          font-weight: 900;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $color--ido--text--hover;
+          }
+        }
+      }
+    }
+  }
+}

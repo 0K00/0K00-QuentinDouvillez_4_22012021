@@ -1,0 +1,98 @@
+$color--contact--title: #d15a1a;
+$color--contact--text: #ffff;
+
+.contact {
+  position: relative;
+  background: url('./img/la-chouette-agence-banniere.webp') no-repeat;
+  text-align: center;
+  &--bloc {
+    display: inline-block;
+    padding: 0 5rem;
+    margin: 5rem 0;
+  }
+  &--title {
+    display: inline-block;
+    color: $color--contact--title;
+    margin: 2rem 0 3rem 0;
+    max-width: 28.25rem;
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+  &--form {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    gap: 4rem;
+    grid-template-areas:
+      'name mail'
+      'how how'
+      'msg msg'
+      'text cta';
+    max-width: 62.5rem;
+    margin-bottom: 3rem;
+    span {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      label {
+        color: $color--contact--text;
+        font-size: 1rem;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        top: 0;
+        transform: translateY(-1.5rem);
+      }
+      input:focus + label,
+      textarea:focus + label {
+        color: $color--contact--title;
+      }
+      input {
+        color: $color--contact--text;
+        border: 0;
+        border-bottom: 1px solid $color--contact--text;
+        outline: none;
+        transition: 0.3s ease-in-out;
+        padding-bottom: 0.5rem;
+        background-color: inherit;
+        &:focus {
+          border-bottom: 1px solid $color--contact--title;
+        }
+      }
+      textarea {
+        color: $color--contact--text;
+        border: 0;
+        border-bottom: 1px solid $color--contact--text;
+        outline: none;
+        transition: 0.3s ease-in-out;
+        padding-bottom: 0.5rem;
+        background-color: inherit;
+        resize: none;
+        &:focus {
+          border-bottom: 1px solid $color--contact--title;
+        }
+      }
+    }
+    &--name {
+      grid-area: name;
+    }
+    &--mail {
+      grid-area: mail;
+    }
+    &--how {
+      grid-area: how;
+    }
+    &--msg {
+      grid-area: msg;
+    }
+    &--text {
+      color: $color--contact--text;
+      text-align: justify;
+      font-size: 0.75rem;
+      grid-area: text;
+    }
+    &--cta {
+      grid-area: cta;
+    }
+  }
+}

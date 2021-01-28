@@ -1,0 +1,529 @@
+@charset "UTF-8";
+@font-face {
+  font-family: et-line;
+  src: url("./font/et-line.eot");
+  src: url("./font/et-line.eot") format("embedded-opentype"), url("./font/et-line.woff") format("woff"), url("./font/et-line.ttf") format("truetype"), url("./font/et-line.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #575757;
+}
+
+.container {
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.texture {
+  backdrop-filter: blur(0.25rem) brightness(0.4);
+  -webkit-backdrop-filter: blur(0.25rem) brightness(0.4);
+}
+
+.cta {
+  cursor: pointer;
+  background: #CB581A;
+  border-radius: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 1, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 1, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  color: #ffff;
+  transition: background 0.3s ease-in-out;
+}
+.cta:hover {
+  filter: brightness(120%);
+}
+.cta:focus, .cta:active {
+  outline: none;
+}
+.cta:active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+header {
+  background: url("./img/la-chouette-agence-banniere.webp") no-repeat fixed;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  background-color: #ffff;
+  padding: 0 2rem;
+}
+.nav--bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". .";
+  padding: 2.9rem 0;
+}
+.nav--bar--logotype {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.nav--bar--logotype h1 {
+  display: none;
+}
+.nav--bar--logotype img {
+  height: 2.5rem;
+}
+.nav--bar--menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+.nav--bar--menu--link {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.nav--bar--menu--link a {
+  color: #131313;
+  transition: color 0.3s ease-in-out;
+}
+.nav--bar--menu--link a:hover {
+  color: #d15a1a;
+}
+.nav--bar--menu--responsive--icon {
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+}
+.nav--bar--menu--responsive--icon span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  height: 0.15rem;
+  background-color: #131313;
+}
+.nav--bar--menu--responsive--icon span::before, .nav--bar--menu--responsive--icon span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.15rem;
+  background-color: #131313;
+}
+.nav--bar--menu--responsive--icon span::after {
+  transform: translateY(-300%);
+}
+.nav--bar--menu--responsive--icon span::before {
+  transform: translateY(300%);
+}
+.nav--bar--menu--responsive {
+  z-index: 0;
+  display: none;
+  position: absolute;
+  top: 5.813rem;
+  background-color: #eeeeee;
+  width: 100vw;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  text-align: justify;
+}
+.nav--bar--menu--responsive--link {
+  display: block;
+  padding: 0.75rem 3rem;
+  font-size: 1rem;
+}
+.nav--bar--menu--responsive--link:last-child {
+  border-top: 2px solid #d3d3d3;
+}
+.nav--bar--menu--responsive--link a {
+  color: #131313;
+  transition: color 0.3s ease-in-out;
+}
+.nav--bar--menu--responsive--link a:hover {
+  color: #d15a1a;
+}
+
+.hero {
+  text-align: center;
+  padding: 7rem 0;
+}
+.hero--logotype img {
+  width: 6.25rem;
+  margin-bottom: 1rem;
+}
+.hero--text {
+  margin-bottom: 2rem;
+}
+.hero--text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #d15a1a;
+}
+
+.serv {
+  text-align: center;
+  max-width: 50rem;
+  margin-top: 5rem;
+}
+.serv--text {
+  color: #131313;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.serv--info {
+  display: flex;
+  font-size: 0.75rem;
+  margin-bottom: 5rem;
+}
+.serv--info span {
+  position: relative;
+  padding: 0 1rem;
+}
+.serv--info span::before {
+  font-family: "et-line";
+  font-size: 3.75rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #364577;
+  border-color: #364577;
+  display: block;
+  margin-bottom: 2rem;
+}
+.serv--info span::after {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.serv--info span:nth-child(1)::before {
+  content: "";
+}
+.serv--info span:nth-child(1)::after {
+  content: "Web design";
+}
+.serv--info span:nth-child(2)::before {
+  content: "";
+}
+.serv--info span:nth-child(2)::after {
+  content: "Stratégie";
+}
+.serv--info span:nth-child(3)::before {
+  content: "";
+}
+.serv--info span:nth-child(3)::after {
+  content: "Illustrations";
+}
+.serv--quota {
+  margin-bottom: 5rem;
+}
+.serv--quota--text {
+  color: #131313;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.serv--quota--text::before {
+  content: "“";
+}
+.serv--quota--text::after {
+  content: "”";
+}
+.serv--quota--author {
+  font-size: 1rem;
+}
+
+.ido {
+  background: url("./img/image-de-presentation.webp") no-repeat fixed;
+}
+.ido--bloc {
+  padding: 6.25rem 0;
+}
+.ido--bloc--item {
+  text-align: center;
+  padding: 2.5rem;
+  max-width: 37.5rem;
+}
+.ido--bloc--item--title {
+  margin-bottom: 1.5rem;
+  color: #d15a1a;
+}
+.ido--bloc--item--title h3 {
+  font-size: 1.375rem;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+.ido--bloc--item--text {
+  color: #ffff;
+  font-size: 0.75rem;
+}
+.ido--bloc--item--text p {
+  margin-bottom: 1rem;
+}
+.ido--bloc--item--text a {
+  color: #ffff;
+  text-decoration: underline;
+  font-weight: 900;
+  transition: color 0.3s ease-in-out;
+}
+.ido--bloc--item--text a:hover {
+  color: #cccccc;
+}
+
+.port {
+  background: repeating-linear-gradient(0deg, #ffff, #ffff 6px, #e2e2e2 1px, #e2e2e2 7px);
+  padding-bottom: 12rem;
+  text-align: center;
+}
+.port--title {
+  display: inline-block;
+  color: #131313;
+  margin-bottom: 5rem;
+  margin-top: 10rem;
+  max-width: 28.25rem;
+}
+.port--title h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.port--bloc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  grid-template-areas: ". ." ". .";
+  max-width: 37.5rem;
+}
+.port--bloc--card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.port--bloc--card a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.port--bloc--card a img {
+  max-width: 17.75rem;
+}
+.port--bloc--card a:hover img {
+  opacity: 0.6;
+}
+.port--bloc--card a:hover::after {
+  content: "+";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.port--bloc--card--text--title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #131313;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.port--bloc--card--text--subtitle {
+  font-size: 0.75rem;
+  color: #333333;
+}
+
+.contact {
+  position: relative;
+  background: url("./img/la-chouette-agence-banniere.webp") no-repeat;
+  text-align: center;
+}
+.contact--bloc {
+  display: inline-block;
+  padding: 0 5rem;
+  margin: 5rem 0;
+}
+.contact--title {
+  display: inline-block;
+  color: #d15a1a;
+  margin: 2rem 0 3rem 0;
+  max-width: 28.25rem;
+}
+.contact--title h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.contact--form {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  gap: 4rem;
+  grid-template-areas: "name mail" "how how" "msg msg" "text cta";
+  max-width: 62.5rem;
+  margin-bottom: 3rem;
+}
+.contact--form span {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.contact--form span label {
+  color: #ffff;
+  font-size: 1rem;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  top: 0;
+  transform: translateY(-1.5rem);
+}
+.contact--form span input:focus + label,
+.contact--form span textarea:focus + label {
+  color: #d15a1a;
+}
+.contact--form span input {
+  color: #ffff;
+  border: 0;
+  border-bottom: 1px solid #ffff;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  padding-bottom: 0.5rem;
+  background-color: inherit;
+}
+.contact--form span input:focus {
+  border-bottom: 1px solid #d15a1a;
+}
+.contact--form span textarea {
+  color: #ffff;
+  border: 0;
+  border-bottom: 1px solid #ffff;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  padding-bottom: 0.5rem;
+  background-color: inherit;
+  resize: none;
+}
+.contact--form span textarea:focus {
+  border-bottom: 1px solid #d15a1a;
+}
+.contact--form--name {
+  grid-area: name;
+}
+.contact--form--mail {
+  grid-area: mail;
+}
+.contact--form--how {
+  grid-area: how;
+}
+.contact--form--msg {
+  grid-area: msg;
+}
+.contact--form--text {
+  color: #ffff;
+  text-align: justify;
+  font-size: 0.75rem;
+  grid-area: text;
+}
+.contact--form--cta {
+  grid-area: cta;
+}
+
+.footer {
+  background-color: #d15a1a;
+  text-align: center;
+  padding: 2rem 0;
+}
+.footer--social {
+  color: #ffff;
+}
+.footer--social--bloc {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+.footer--social--bloc--link a {
+  color: #ffff;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+.footer--social--bloc--link a:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 48rem) {
+  .nav--bar--menu {
+    display: none;
+  }
+
+  .nav--bar--menu--responsive, .nav--bar--menu--responsive--icon {
+    display: block;
+  }
+
+  .apear {
+    transform: translateY(0%);
+  }
+
+  .serv--info {
+    display: flex;
+    flex-direction: column;
+  }
+  .serv--info span::after {
+    top: 60%;
+  }
+
+  .port--bloc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact--bloc {
+    padding: 1rem;
+    display: block;
+    margin: 0;
+  }
+
+  .contact--form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact--form--msg textarea {
+    margin-top: 2.75rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
