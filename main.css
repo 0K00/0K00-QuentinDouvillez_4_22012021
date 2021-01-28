@@ -35,7 +35,7 @@ body {
 
 .cta {
   cursor: pointer;
-  background: #d15a1a;
+  background: #CB581A;
   border-radius: 2.5rem;
   text-transform: uppercase;
   padding: 0.75rem 1.75rem;
@@ -60,7 +60,7 @@ body {
 }
 
 header {
-  background: url("./img/la-chouette-agence-banniere.png") no-repeat fixed;
+  background: url("./img/la-chouette-agence-banniere.webp") no-repeat fixed;
 }
 
 .nav {
@@ -196,7 +196,7 @@ header {
 }
 .serv--info {
   display: flex;
-  font-size: 0.688rem;
+  font-size: 0.75rem;
   margin-bottom: 5rem;
 }
 .serv--info span {
@@ -262,7 +262,7 @@ header {
 }
 
 .ido {
-  background: url("./img/image-de-presentation.png") no-repeat fixed;
+  background: url("./img/image-de-presentation.webp") no-repeat fixed;
 }
 .ido--bloc {
   padding: 6.25rem 0;
@@ -283,7 +283,7 @@ header {
 }
 .ido--bloc--item--text {
   color: #ffff;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 .ido--bloc--item--text p {
   margin-bottom: 1rem;
@@ -371,7 +371,7 @@ header {
 
 .contact {
   position: relative;
-  background: url("./img/la-chouette-agence-banniere.png") no-repeat;
+  background: url("./img/la-chouette-agence-banniere.webp") no-repeat;
   text-align: center;
 }
 .contact--bloc {
@@ -454,7 +454,7 @@ header {
 .contact--form--text {
   color: #ffff;
   text-align: justify;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   grid-area: text;
 }
 .contact--form--cta {
